@@ -117,7 +117,15 @@ public class Fraction {
             }else {
                 return " = " + this.numerator + "/" + this.denominator;
             }
-        }else {
+        }else if(this.denominator == 1 && other.denominator == 1){
+            toLowestTerms();
+            other.toLowestTerms();
+            if(other.numerator < 0){
+                other.numerator *= -1;
+                return " = " + (this.numerator - other.numerator);
+            }
+            return " = " + (this.numerator - other.numerator);
+        }else{
             int multipleFromThis = this.denominator;
             int multipleFromOther = other.denominator;
             int num1Adjusted = this.numerator * multipleFromOther;
