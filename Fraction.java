@@ -74,6 +74,7 @@ public class Fraction {
             toLowestTerms();
             other.toLowestTerms();
             if(other.denominator == 1){
+                System.out.println(other.denominator + "    " + other.numerator);
                 return " = " + other.numerator;
             }else {
                 return " = " + other.numerator + "/" + other.denominator;
@@ -145,8 +146,8 @@ public class Fraction {
 
     public String subtract(Fraction other){
 
-        this.numerator *= -1;
-        add(this);
+        other.numerator *= -1;
+        add(other);
         return " = " + toString();
 
     }
