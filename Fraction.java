@@ -73,11 +73,19 @@ public class Fraction {
         if(this.numerator == 0){
             toLowestTerms();
             other.toLowestTerms();
-            return " = " + other.numerator + "/" + other.denominator;
+            if(other.denominator == 1){
+                return " = " + other.numerator;
+            }else {
+                return " = " + other.numerator + "/" + other.denominator;
+            }
         }else if(other.denominator == 0){
             toLowestTerms();
             other.toLowestTerms();
-            return " = " + this.numerator + "/" + this.denominator;
+            if(this.denominator == 1){
+                return " = " + this.numerator;
+            }else {
+                return " = " + this.numerator + "/" + this.denominator;
+            }
         } else{
             int multipleFromThis = this.denominator;
             int multipleFromOther = other.denominator;
@@ -95,10 +103,20 @@ public class Fraction {
 
         if(this.numerator == 0){
             toLowestTerms();
-            return " = " + other.numerator + "/" + other.denominator;
+            other.toLowestTerms();
+            if(other.denominator == 1){
+                return " = " + other.numerator;
+            }else {
+                return " = " + other.numerator + "/" + other.denominator;
+            }
         }else if(other.denominator == 0){
             toLowestTerms();
-            return " = " + this.numerator + "/" + this.denominator;
+            other.toLowestTerms();
+            if(this.denominator == 1){
+                return " = " + this.numerator;
+            }else {
+                return " = " + this.numerator + "/" + this.denominator;
+            }
         }else {
             int multipleFromThis = this.denominator;
             int multipleFromOther = other.denominator;
