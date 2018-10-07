@@ -74,7 +74,6 @@ public class Fraction {
             toLowestTerms();
             other.toLowestTerms();
             if(other.denominator == 1){
-                System.out.println(other.denominator + "    " + other.numerator);
                 return " = " + other.numerator;
             }else {
                 return " = " + other.numerator + "/" + other.denominator;
@@ -99,59 +98,12 @@ public class Fraction {
         }
     }
 
-/*
-    public String subtract(Fraction other){
-
-        if(this.numerator == 0){
-            toLowestTerms();
-            other.toLowestTerms();
-            if(other.denominator == 1){
-                return " = " + other.numerator;
-            }else {
-                return " = " + other.numerator + "/" + other.denominator;
-            }
-        }else if(other.denominator == 0){
-            toLowestTerms();
-            other.toLowestTerms();
-            if(this.denominator == 1){
-                return " = " + this.numerator;
-            }else {
-                return " = " + this.numerator + "/" + this.denominator;
-            }
-        }else if(this.denominator == 1 && other.denominator == 1){
-            toLowestTerms();
-            other.toLowestTerms();
-            if(other.numerator < 0){
-                other.numerator *= -1;
-                return " = " + (this.numerator - other.numerator);
-            }
-            return " = " + (this.numerator - other.numerator);
-        }else{
-            int multipleFromThis = this.denominator;
-            int multipleFromOther = other.denominator;
-            int num1Adjusted = this.numerator * multipleFromOther;
-            int num2Adjusted = other.numerator * multipleFromThis;
-            this.denominator *= multipleFromOther;
-            this.numerator = num1Adjusted - num2Adjusted;
-            toLowestTerms();
-            if(denominator < 0){
-                numerator *= -1;
-                denominator *= -1;
-            }
-            return " = " + toString();
-        }
-    }
-*/
-
 
     public String subtract(Fraction other){
 
         other.numerator *= -1;
-        add(other);
-        return " = " + toString();
-
+        return add(other);
     }
-
 
 
     public String multiply(Fraction other){
