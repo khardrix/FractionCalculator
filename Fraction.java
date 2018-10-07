@@ -98,7 +98,7 @@ public class Fraction {
         }
     }
 
-
+/*
     public String subtract(Fraction other){
 
         if(this.numerator == 0){
@@ -140,6 +140,17 @@ public class Fraction {
             return " = " + toString();
         }
     }
+*/
+
+
+    public String subtract(Fraction other){
+
+        this.numerator *= -1;
+        add(this);
+        return " = " + toString();
+
+    }
+
 
 
     public String multiply(Fraction other){
