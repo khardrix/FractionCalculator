@@ -73,7 +73,7 @@ public class Fraction {
         if(this.numerator == 0){
             toLowestTerms();
             return " = " + other.numerator + "/" + other.denominator;
-        }else if(other.numerator == 0){
+        }else if(other.denominator == 0){
             toLowestTerms();
             return " = " + this.numerator + "/" + this.denominator;
         }else {
@@ -81,13 +81,12 @@ public class Fraction {
             int multipleFromOther = other.denominator;
             int num1Adjusted = this.numerator * multipleFromOther;
             int num2Adjusted = other.numerator * multipleFromThis;
-            int den1Adjusted = this.denominator * multipleFromOther;
-            int den2Adjusted = other.denominator * multipleFromThis;
+            this.denominator *= multipleFromOther;
             this.numerator = num1Adjusted + num2Adjusted;
-            this.denominator = den1Adjusted + den2Adjusted;
             toLowestTerms();
             return " = " + toString();
         }
+
     }
 
 

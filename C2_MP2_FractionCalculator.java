@@ -177,6 +177,7 @@ public class C2_MP2_FractionCalculator {
 
     public static void outro(){
 
-        System.out.println("Thank you for using \"Fraction Calculator.\" Have a great day! Goodbye!");
+        System.out.println("\n---------------------------------------------------------------------------" +
+                "\nThank you for using \"Fraction Calculator.\" Have a great day! Goodbye!");
     }
 }
